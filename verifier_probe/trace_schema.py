@@ -10,11 +10,11 @@ TRACE_FIELDS: Dict[str, str] = {
     "verdict": "dict. status ('verified' | 'falsified' | 'unknown'), "
                "bab_entries (int, 0 = no branch-and-bound was needed), "
                "elapsed_sec (float, seconds).",
-    "global_lower_bound": "list of list of float with shape [1, 1], or None. "
-                          "The verifier's lower bound on the margin (logit of "
-                          "the label minus the best other logit) BEFORE "
-                          "branch-and-bound. Can be negative even when the "
-                          "verdict is 'verified', because branch-and-bound "
+    "global_lower_bound": "list of list of float with shape [1, num_classes - 1], "
+                          "or None. The verifier's lower bound on the margin "
+                          "(logit of the label minus the best other logit) "
+                          "BEFORE branch-and-bound. Can be negative even when "
+                          "the verdict is 'verified', because branch-and-bound "
                           "then closes the gap. Use verdict.status, not this "
                           "number, for the final answer.",
     "states": "list of layer states, in network order.",
