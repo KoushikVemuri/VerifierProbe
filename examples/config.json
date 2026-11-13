@@ -1,0 +1,11 @@
+{
+  "seed": 0,
+  "label": null,
+  "tolerance": 1e-6,
+  "pgd_steps": 100,
+  "pgd_restarts": 20,
+  "grow_factors": [1.1, 1.25, 1.5, 2.0, 3.0],
+  "knife_margin": 1e-3,
+  "bisect_steps": 60,
+  "verifier_calls": 15
+}
